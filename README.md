@@ -110,3 +110,95 @@ This code is **strictly for educational purposes**. Creating, distributing, or u
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Ayatollah-Ransomware.git
+   Compile the code using a C compiler (e.g., GCC):
+
+bash
+Copy
+gcc src/c/ayatollah-ransomware.c -o ransomware -lcrypt32
+Run the program:
+
+bash
+Copy
+./ransomware
+Python Implementation
+Ensure you have Python installed along with the cryptography library:
+
+bash
+Copy
+pip install cryptography
+Run the Python script:
+
+bash
+Copy
+python src/python/ayatollah-ransomware.py
+JavaScript/Node.js Implementation
+Ensure you have Node.js installed.
+
+Run the JavaScript file:
+
+bash
+Copy
+node src/javascript/ayatollah-ransomware.js
+Configuration
+The program uses a configuration file (config.enc) to specify settings such as:
+
+Target Directory: Directory to encrypt/decrypt (default: C:\test).
+
+Ransom Message: Message displayed after encryption.
+
+Bitcoin Address: Payment address for the ransom.
+
+To modify the configuration:
+
+Edit the config.enc file (ensure it is encrypted for security).
+
+Rebuild or rerun the program.
+
+Important Notes
+Windows Compatibility: The C implementation uses the Windows CryptoAPI and is designed for Windows. Python and JavaScript implementations are cross-platform.
+
+Target Directory: The program targets the C:\test directory by default. Modify the code to change the target directory.
+
+Testing Environment: Do not run this code on important files or systems. Use a controlled environment for testing.
+
+Ethical Use
+This project is intended to:
+
+Raise awareness about ransomware.
+
+Help developers understand how ransomware works.
+
+Provide a foundation for building defensive tools.
+
+Always use this knowledge responsibly and ethically.
+
+Anti-Debugging Techniques
+The program includes the following anti-debugging measures:
+
+Debugger Detection: Checks for the presence of a debugger and terminates if detected.
+
+Code Obfuscation: Techniques to make reverse engineering more difficult.
+
+Resource Monitoring: Detects excessive CPU or memory usage, which may indicate tampering.
+
+Contributing
+Contributions are welcome! If you'd like to improve this project, please follow these steps:
+
+Fork the repository.
+
+Create a new branch for your feature or bug fix.
+
+Submit a pull request with a detailed description of your changes.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Acknowledgments
+Inspired by real-world ransomware attacks.
+
+Built for educational purposes to promote cybersecurity awareness.
+
+Contact
+For questions or feedback, please open an issue on GitHub or contact the maintainer directly.
+
+Remember: This project is for educational purposes only. Use it responsibly! 
