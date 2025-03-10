@@ -59,3 +59,54 @@ This code is for **educational purposes only**. Creating, distributing, or using
 
 ## **Ethical Use**
 This project is intended to raise awareness about ransomware and help developers understand how to protect against such attacks. Always use this knowledge responsibly and ethically.
+
+
+# Ayatollah Ransomware
+
+This project is a **multi-language ransomware simulation** implemented in **C**, **Python**, and **JavaScript/Node.js**. It demonstrates how files in a directory can be encrypted using **AES encryption**, with the AES key itself being encrypted using **RSA**. The project also includes functionality to decrypt the files, simulating a ransomware attack and recovery process.
+
+## **Disclaimer**
+This code is **strictly for educational purposes**. Creating, distributing, or using ransomware is **illegal and unethical**. This project is intended to help security researchers, developers, and students understand how ransomware works in order to better defend against it. **Do not use this code for malicious purposes.**
+
+---
+
+## **Features**
+- **Multi-Language Support**: Implemented in C, Python, and JavaScript/Node.js.
+- **AES Encryption**: Files are encrypted using AES-256 in CBC mode.
+- **RSA Key Wrapping**: AES keys are encrypted using RSA-2048 for secure key management.
+- **Multi-Threading**: Parallel file encryption for improved performance.
+- **Anti-Debugging**: Techniques to detect and evade debugging.
+- **Logging**: Detailed logging for debugging and analysis.
+- **Cross-Platform**: Python and JavaScript implementations work on multiple platforms.
+- **Configurable**: Easy to modify target directories, encryption settings, and ransom messages.
+
+---
+
+## **How It Works**
+1. **Encryption**:
+   - Generates an RSA key pair.
+   - For each file in the specified directory:
+     - Generates a random AES key.
+     - Encrypts the file using AES-256.
+     - Encrypts the AES key using the RSA public key and saves it in a `.key` file.
+   - Displays a ransom message after encryption.
+
+2. **Decryption**:
+   - Reads the encrypted AES key from the `.key` file.
+   - Decrypts the AES key using the RSA private key.
+   - Decrypts the file using the AES key.
+
+3. **Anti-Debugging**:
+   - Detects debuggers and terminates the program if one is found.
+   - Prevents reverse engineering and tampering.
+
+4. **Logging**:
+   - Logs all actions to a file for debugging and auditing.
+
+---
+
+## **Usage**
+### **C Implementation**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Ayatollah-Ransomware.git
